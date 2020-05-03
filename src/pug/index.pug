@@ -1,0 +1,38 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title ポートフォリオ
+  body
+    header
+      .container        
+        .logo
+          .logo__text
+            | Makito Mori's Page
+          .logo__img
+            img(src="./logo.jpg", alt="logoの画像", srcset="")
+            
+
+        nav.main-nav
+          include includes/main-nav.pug
+        .vanta-erea
+    
+
+    main
+      .container
+        include includes/about.pug
+        include includes/skill.pug
+        include includes/work.pug
+        include includes/contact.pug
+        
+      
+       
+    footer
+      .container
+        .footer-inner.text-center
+          p.copyright
+            | &copy; 2020 Makito Mori All rights reserved
+          p.credit-logo-maker
+            <div>ロゴは <a href="https://www.designevo.com/jp/logo-maker/" title="無料オンラインロゴメーカー">DesignEvo</a> ロゴメーカーさんに作られる</div>

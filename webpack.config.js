@@ -19,8 +19,8 @@ module.exports = (env, argv) => ({
     open: true,
     watchContentBase: true,
     headers: {
-      "X-Custom-Foo": "bar" //headerに付け加えられる。chromeの開発者ツールで「Network」でfilterの「ALL」を選び左にあるSearchから「X-Custom-Foo」と検索すれば出てくる。これをjsで読み取る方法がわかればよし。
-    }
+      "X-Custom-Foo": "bar", //headerに付け加えられる。chromeの開発者ツールで「Network」でfilterの「ALL」を選び左にあるSearchから「X-Custom-Foo」と検索すれば出てくる。これをjsで読み取る方法がわかればよし。
+    },
     // index: "dev_top.html"//http://localhost:7776でURLをたたいた時に出てくるbuildしたhtmlファイル
   },
 
@@ -33,7 +33,7 @@ module.exports = (env, argv) => ({
     path: path.join(__dirname, "docs"),
     // path: `${__dirname}`,
     // 出力ファイル名
-    filename: "00_bundle.js"
+    filename: "00_bundle.js",
   },
 
   // 最適化オプションを上書き
@@ -45,11 +45,11 @@ module.exports = (env, argv) => ({
         terserOptions: {
           compress: {
             // drop_console: true //console.logを削除
-          }
-        }
+          },
+        },
       }),
-      new OptimizeCssAssetsPlugin({})
-    ]
+      new OptimizeCssAssetsPlugin({}),
+    ],
   },
 
   module: {
@@ -69,11 +69,11 @@ module.exports = (env, argv) => ({
                 "@babel/preset-env",
                 {
                   // target:{ie:11}//ターゲットとしてIE11を指定
-                }
-              ]
-            }
-          }
-        ]
+                },
+              ],
+            },
+          },
+        ],
       },
       // pug-loaderの設定
       {
@@ -84,11 +84,11 @@ module.exports = (env, argv) => ({
             options:
               argv.mode !== "production"
                 ? {
-                    pretty: true
+                    pretty: true,
                   }
-                : {} //HTMLを圧縮しないオプション
-          }
-        ]
+                : {}, //HTMLを圧縮しないオプション
+          },
+        ],
       },
       {
         // 対象となるファイルの拡張子(sass,scss,csssf)
@@ -102,41 +102,37 @@ module.exports = (env, argv) => ({
           // CSSをバンドルするための機能
           "css-loader",
           // compiles Sass to CSS
-          "sass-loader"
-        ]
-      }
-    ]
+          "sass-loader",
+        ],
+      },
+      // imgの設定
+      {
+        test: /\.(png|svg|jpe?g|gif)/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[ext]",
+            // outputPath: './assets/img/',
+            // publicPath: '../assets/img'
+          },
+        },
+      },
+    ],
   },
 
   plugins: [
     //buildしたらdocsディレクトリの中身が一回削除されるやつ。
     new CleanWebpackPlugin({
       //削除されたくないやつを書くんかな？document見てもよくわからん。
-      cleanAfterEveryBuildPatterns: ["static*.*", "!static1.js"]
+      cleanAfterEveryBuildPatterns: ["static*.*", "!static1.js"],
     }),
     new MiniCssExtractPlugin({
-      filename: "00_bundle.css"
+      filename: "00_bundle.css",
     }),
     //pugからhtmlの変換
     new HtmlWebpackPlugin({
-      template: pug_root + "apply_top.pug",
-      filename: "./index.html"
-    }),
-    new HtmlWebpackPlugin({
-      template: pug_root + "apply_approval.pug",
-      filename: "./apply_approval.html"
-    }),
-    new HtmlWebpackPlugin({
-      template: pug_root + "dev_top.pug",
-      filename: "./dev_top.html"
-    }),
-    new HtmlWebpackPlugin({
-      template: pug_root + "admin_top.pug",
-      filename: "./admin_top.html"
-    }),
-    new HtmlWebpackPlugin({
-      template: pug_root + "saml_login.pug",
-      filename: "./saml_login_index.html"
+      template: pug_root + "index.pug",
+      filename: "./index.html",
     }),
     // new HtmlWebpackPlugin({
     //   template: pug_root + '.pug',
@@ -153,10 +149,10 @@ module.exports = (env, argv) => ({
       "window.jQuery": "jquery",
       "window.$": "jquery",
       _: "lodash",
-      "window._": "lodash"
-    })
+      "window._": "lodash",
+    }),
   ],
   watch: true,
   //chrome開発者ツールでどのcssからとってきたかわかるけどmain.scssかbootstrap.min.jsしかないからあんまり意味ない
-  devtool: "source-map"
+  devtool: "source-map",
 });
