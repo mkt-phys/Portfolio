@@ -1,0 +1,31 @@
+[
+  {
+    "project": "xxx",
+    "repository": "yyy",
+    "admin_name": "aaa",
+    "admin_email": "aaa@xxx.com",
+    "dev_member":{ [
+       {
+        "dev_name": "dev_bbb",
+        "dev_email": "bbb@xxx.com"
+      },
+       {
+        "dev_name": "dev_ccc",
+        "dev_email": "ccc@xxx.com"
+      },
+       {
+        "dev_name": "dev_ddd",
+        "dev_email": "ddd@xxx.com"
+       }
+       ]
+    }
+  }
+]
+
+----登録されるカラム
+project | repository | name    |    email    |
+-------------------------------------------------
+xxx     | yyy        | aaa     | aaa@xxx.com |
+xxx     | yyy        | dev_bbb | bbb@xxx.com |
+xxx     | yyy        | dev_ccc | ccc@xxx.com |
+xxx     | yyy        | dev_ddd | ddd@xxx.com |

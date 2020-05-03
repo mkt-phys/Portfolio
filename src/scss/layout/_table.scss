@@ -1,0 +1,7 @@
+.table-wrapper {
+  overflow: auto; /*tableをスクロールさせる*/
+  white-space: nowrap; /*tableのセル内にある文字の折り返しを禁止*/
+}
+.table {
+  font-size: 0.8rem;
+}

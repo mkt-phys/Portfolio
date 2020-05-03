@@ -1,0 +1,34 @@
+@charset "UTF-8"; //scssの読み込み
+// @import '/path/to/reset-css/reset.css'; //参考：https://www.npmjs.com/package/reset-css
+/* ==============================================================
+*  ベース
+* ============================================================ */
+@import "./scss/base/_variables"; /* ==============================================================
+*  レイアウト
+* ============================================================ */
+@import "./scss/layout/_header";
+@import "./scss/layout/_container";
+@import "./scss/layout/_bootstrap";
+@import "./scss/layout/_tab_content_wrapper";
+@import "./scss/layout/_table";
+
+/*
+ ==============================================================
+*  モジュール（汎用的に使用できるスタイル）
+* ============================================================ */
+@import "./scss/module/_nav";
+@import "./scss/module/_button";
+@import "./scss/module/_form";
+@import "./scss/module/_show-information";
+
+body {
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+  box-sizing: content-box;
+
+  a {
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

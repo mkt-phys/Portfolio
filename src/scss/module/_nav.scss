@@ -1,0 +1,15 @@
+.nav {
+  background-color: $theme_color;
+
+  a {
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.tab-content {
+  margin: 0.5rem 1rem ;
+}

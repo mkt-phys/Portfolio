@@ -1,0 +1,10 @@
+.detail_information{
+    &:hover + .information{
+        // font-size:20px;
+        display:block;
+    }
+}
+
+.information{
+    display:none;
+}

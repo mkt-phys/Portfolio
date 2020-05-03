@@ -1,0 +1,114 @@
+.button {
+  font-size: 1.5rem;
+  border: solid 2px $theme_color;
+  border-radius: 10px;
+  // border-bottom: solid 4px $theme_color;
+  padding: 1rem;
+  width: 15rem;
+  margin: 0.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  // transition: 5s; //5秒かけて影が戻る
+  // &:active {
+  //   /*ボタンを押したとき*/
+  //   -webkit-transform: translateY(4px);
+  //   transform: translateY(4px);
+  //   /*下に動く*/
+  //   border-bottom: solid 2px $theme_color;
+  //   /*線を消す*/
+  // }
+
+  &:disabled {
+    background-color: #f3f3f3;
+    border-color: #ddd;
+    color: #ccc;
+    cursor: not-allowed;
+    white-space: normal;
+  }
+
+  &:hover:enabled {
+    color: #212529;
+    background-color: #cec5c5;
+    border-color: #061c57;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 43, 121, 0.5);
+    transition: 0.1s;
+  }
+}
+//ボタンが非活性の時をわかりやすく
+// input.del:enabled {
+//   background-color: #cccccc;
+// }
+button {
+  font-size: 1.5rem;
+  border: solid 2px $theme_color;
+  border-radius: 10px;
+  // border-bottom: solid 4px $theme_color;
+  padding: 1rem;
+  width: 15rem;
+  margin: 0.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  // transition: 5s; //5秒かけて影が戻る
+
+  &:disabled {
+    background-color: #f3f3f3;
+    border-color: #ddd;
+    color: #ccc;
+    cursor: not-allowed;
+    white-space: normal;
+  }
+
+  &:hover:enabled {
+    color: #212529;
+    background-color: #cec5c5;
+    border-color: #061c57;
+  }
+  // &:active {
+  //   // /*ボタンを押したとき*/
+  //   // -webkit-transform: translateY(4px);
+  //   // transform: translateY(4px);
+  //   // /*下に動く*/
+  //   // border-bottom: solid 2px $theme_color;
+  //   // /*線を消す*/
+  // }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 43, 121, 0.5);
+    transition: 0.1s;
+  }
+}
+
+//マルパクリ：https://qiita.com/comy/items/a9eac1de51f9fb1dfcca
+/* オリジナルボタン */
+.original_btn {
+  border: 1px solid #ddd;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #666;
+  background: linear-gradient(to bottom, #fff 0, #f4f4f4 100%);
+  box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.09);
+}
+/* 未選択時のアイコン */
+.icon {
+  font-size: 12px;
+  margin: 0 10px 0 15px;
+  padding: 3px 30px;
+  border-radius: 15px;
+  background: #666;
+  color: #fff;
+  display: inline-block;
+}
+/* 選択時のアイコン */
+.icon.select {
+  background: #ff5050;
+  color: #fff;
+}
+/* ファイル名 */
+.filename {
+  display: inline-block;
+  font-size: 12px;
+}

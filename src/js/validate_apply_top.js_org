@@ -1,0 +1,49 @@
+/*
+概要：種々のバリデーション
+      emailはメール形式
+      ユーザー名とリポジトリ名は英数字のみ
+参考：https://programmercollege.jp/column/9253/#section200
+*/
+export default function() {
+  console.log("validate apply top");
+
+  //emailのバリデーション
+  $(document).on("blur", "input.js-validate_email", function() {
+    let email = $("input.js-validate_email").val();
+    console.log("email", email);
+
+    // if (email.match(/^([a-z0-9_\.\-])+@([a-z0-9_\.\-])+[^.]$/i)
+    if (!email.match(/.+@.+\..+/)) {
+      alert("正しいメールアドレスを入力してください！");
+      $("input.js-validate_email").val("");
+    }
+  });
+
+  //ユーザー名（Sys_Name）のバリデーション
+  $("input.js-validate_sys_name").click(function() {
+    $(document).on("blur", "input.js-validate_sys_name", function() {
+      console.log("focus");
+
+      let sys_name = $("input:focus.js-validate_sys_name").val();
+      console.log(sys_name);
+      if (!sys_name.match(/^[0-9a-zA-Z]*$/)) {
+        alert("ユーザー名は英数字のみで入力してください。");
+        // $("input.js-validate_sys_name").val("");
+        console.log("this", this);
+        console.log(`this.val():${$(this).val()}`);
+
+        $(this).val("");
+      }
+    });
+  });
+
+  //リポジトリ名のバリデーション
+  $(document).on("blur", "input.js-validate_repository", function() {
+    let repository = $("input.js-validate_repository").val();
+    console.log(repository);
+    if (!repository.match(/^[0-9a-zA-Z]*$/)) {
+      alert("リポジトリ名は英数字のみで入力してください。");
+      $("input.js-validate_repository").val("");
+    }
+  });
+}

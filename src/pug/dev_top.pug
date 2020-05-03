@@ -1,0 +1,36 @@
+doctype html
+html(lang="ja" dir="ltr")
+  head
+    meta(charset="utf-8")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title AI-Cloud-Service 開発ポータル
+  body
+    div.wrapper
+      header.dev
+        .head_wrapper
+          include includes/dev_header.pug
+          include includes/dev_login_name.pug
+      div.main-content
+        ul.nav.nav-tabs.nav-fill.justify-content-around
+          li.nav-item
+            a.nav-link.active(href="#home" data-toggle="tab") Home
+          li.nav-item
+            a.nav-link(href="#apply" data-toggle="tab") 申請
+          li.nav-item
+            a.nav-link(href="#data" data-toggle="tab") データ
+          li.nav-item
+            a.nav-link(href="#code" data-toggle="tab") コード
+          //- li.nav-item
+          //-   a.nav-link(href="#fw" data-toggle="tab") フレームワーク
+          li.nav-item.js-getRepository
+            a.nav-link(href="#project" data-toggle="tab") プロジェクト
+
+        .tab-content
+          include /comp_top_dev/home.pug
+          include /comp_top_dev/apply.pug
+          include /comp_top_dev/data.pug
+          include /comp_top_dev/code.pug
+          //- include /comp_top_dev/fw.pug
+          include /comp_top_dev/project.pug
+    footer
