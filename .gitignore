@@ -3,5 +3,4 @@
 diary.md
 *.zip
 *.log
-sample.js
-sample02.js
+.vscode

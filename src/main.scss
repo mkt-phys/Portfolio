@@ -12,10 +12,8 @@
  ==============================================================
 *  モジュール（汎用的に使用できるスタイル）
 * ============================================================ */
-@import "./scss/module/_nav";
-@import "./scss/module/_button";
-@import "./scss/module/_form";
-@import "./scss/module/_show-information";
+@import "./scss/module/_header";
+// @import "./scss/module/_button";
 
 body {
   font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;

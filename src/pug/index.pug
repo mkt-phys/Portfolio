@@ -7,17 +7,25 @@ html(lang="ja")
     title ポートフォリオ
   body
     header
-      .container        
+      .container.header-container
+        input#nav-toggle.nav-toggle(type="checkbox" name="")
+        label.nav-toggle-label(for="nav-toggle")
+          span
         .logo
+          //- .logo__img
+            img(src=require("./logo-small-no_name.jpg").default, alt="logoの画像" )
           .logo__text
+            //- | Makito Mori's Page
+        .site-title
+          a(href="#")
             | Makito Mori's Page
-          .logo__img
-            img(src=require("./logo.jpg").default, alt="logoの画像" )
-            
 
         nav.main-nav
           include includes/main-nav.pug
-        .vanta-erea
+        //- input#nav-toggle.nav-toggle(type="checkbox" name="")
+        //- label.nav-toggle-label(for="nav-toggle")
+        //-   span
+        #vanta-erea
     
 
     main
