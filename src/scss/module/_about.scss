@@ -1,0 +1,30 @@
+.section {
+  &__content {
+    .about {
+      padding: 0;
+      // display: flex;
+      justify-content: space-around;
+
+      &__list {
+
+        // text-align: center;
+        // display: inline-block;
+        list-style: none;
+        padding-bottom: 1rem;
+      }
+
+      &__title {
+        display: inline-block;
+        width: 30%;
+        text-align: right;
+
+      }
+
+      &__detail {
+        display: inline-block;
+        width: 70%;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,6 +1,9 @@
 main {
   .section {
+    // background: linear-gradient(to bottom, #d7d7d7, white);
     display: flex;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 
     @media (max-width: 800.98px) {
       flex-direction: column;
@@ -9,8 +12,17 @@ main {
     &__title {
       width: 300px;
       text-align: center;
-      margin: auto;
+      margin: 0 auto;
+
+      .h2__icon {
+        font-size: 150px;
+      }
       // background-color: blue;
+      h2 {
+        // padding-top: 2rem;
+        font-size: 60px;
+        text-decoration: underline;
+      }
     }
 
     &__content {
@@ -18,14 +30,13 @@ main {
       // justify-content: space-around;
 
       .skill {
-        @media (max-width:800px) {
+        @media (max-width: 800px) {
           // text-align: center;
         }
 
         text-align: center;
         padding: 0;
         margin: 0;
-
 
         &__list {
           margin: 1rem;
@@ -34,11 +45,6 @@ main {
           // border: 0.5px solid black;
           border-radius: 5px;
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
-          &:hover {
-            transition: transform ease-in-out;
-            transform: translateY(-10px);
-          }
         }
 
         &__name {
@@ -49,7 +55,6 @@ main {
           // width: 7rem;
           text-align: center;
 
-
           img {
             // margin: 1rem;
             // width: 6rem;
@@ -57,11 +62,8 @@ main {
             max-width: 96px;
             // max-width: 6rem;
           }
-
         }
       }
     }
-
-
   }
 }

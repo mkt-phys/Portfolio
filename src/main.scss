@@ -5,6 +5,7 @@
 * ============================================================ */
 @import "./scss/base/_variables";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 /* ==============================================================
 *  レイアウト
@@ -18,12 +19,10 @@
 * ============================================================ */
 // @import "./scss/module/_header";
 // @import "./scss/module/_button";
+@import "./scss/module/_about";
 
 body {
-  font-family: "Poppins", "游ゴシック",
-    "Yu Gothic",
-    "游ゴシック体",
-    YuGothic,
+  font-family: "Poppins", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic,
     sans-serif;
   box-sizing: content-box;
 }
