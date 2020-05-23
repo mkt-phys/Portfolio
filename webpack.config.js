@@ -1,6 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const {
+  CleanWebpackPlugin
+} = require("clean-webpack-plugin");
 const webpack = require("webpack");
 const pug_root = `./src/pug/`; //読み込まれるpugのディレクトリ
 const build_html_root = `./html/`; //buildしたhtmlの出力先のディレクトリ
@@ -58,37 +60,30 @@ module.exports = (env, argv) => ({
       //拡張子 .js の場合
       {
         test: /\.js$/,
-        use: [
-          {
-            // Babel を利用する
-            loader: "babel-loader",
-            // Babel のオプションを指定する
-            options: {
-              presets: [
-                // プリセットを指定することで、ES2019 を ES5 に変換
-                "@babel/preset-env",
-                {
-                  // target:{ie:11}//ターゲットとしてIE11を指定
-                },
-              ],
-            },
+        use: [{
+          // Babel を利用する
+          loader: "babel-loader",
+          // Babel のオプションを指定する
+          options: {
+            presets: [
+              // プリセットを指定することで、ES2019 を ES5 に変換
+              "@babel/preset-env",
+              {
+                // target:{ie:11}//ターゲットとしてIE11を指定
+              },
+            ],
           },
-        ],
+        }, ],
       },
       // pug-loaderの設定
       {
         test: /\.pug$/,
-        use: [
-          {
-            loader: "pug-loader",
-            options:
-              argv.mode !== "production"
-                ? {
-                    pretty: true,
-                  }
-                : {}, //HTMLを圧縮しないオプション
-          },
-        ],
+        use: [{
+          loader: "pug-loader",
+          options: argv.mode !== "production" ? {
+            pretty: true,
+          } : {}, //HTMLを圧縮しないオプション
+        }, ],
       },
       {
         // 対象となるファイルの拡張子(sass,scss,csssf)
@@ -119,7 +114,9 @@ module.exports = (env, argv) => ({
       },
     ],
   },
-
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".json"]
+  },
   plugins: [
     //buildしたらdocsディレクトリの中身が一回削除されるやつ。
     new CleanWebpackPlugin({

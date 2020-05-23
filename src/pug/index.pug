@@ -16,16 +16,23 @@ html(lang="ja")
             img(src=require("./logo-small-no_name.jpg").default, alt="logoの画像" )
           .logo__text
             //- | Makito Mori's Page
-        .site-title
+        .logo-title
           a(href="#")
             | Makito Mori's Page
 
         nav.main-nav
           include includes/main-nav.pug
-        //- input#nav-toggle.nav-toggle(type="checkbox" name="")
-        //- label.nav-toggle-label(for="nav-toggle")
-        //-   span
-        #vanta-erea
+        //- canvas.background(style="background-color:black;")
+      #particles-js.particles-js
+        .site-title
+          ul.site-title__inner.fly-in-text.hidden 
+            li.site-title__word W
+            li.site-title__word e
+            li.site-title__word l
+            li.site-title__word c
+            li.site-title__word o
+            li.site-title__word m
+            li.site-title__word e 
     
 
     main
@@ -35,7 +42,7 @@ html(lang="ja")
         include includes/work.pug
         include includes/contact.pug
         
-      
+      .aaaaa(style="height:1000px;")
        
     footer
       .container
@@ -44,3 +51,4 @@ html(lang="ja")
             | &copy; 2020 Makito Mori All rights reserved
           p.credit-logo-maker
             <div>ロゴは <a href="https://www.designevo.com/jp/logo-maker/" title="無料オンラインロゴメーカー">DesignEvo</a> ロゴメーカーさんに作られる</div>
+    

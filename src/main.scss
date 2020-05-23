@@ -4,20 +4,26 @@
 *  ベース
 * ============================================================ */
 @import "./scss/base/_variables";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 /* ==============================================================
 *  レイアウト
 * ============================================================ */
 @import "./scss/layout/_container";
+@import "./scss/layout/_header";
+@import "./scss/layout/_main";
 /*
  ==============================================================
 *  モジュール（汎用的に使用できるスタイル）
 * ============================================================ */
-@import "./scss/module/_header";
+// @import "./scss/module/_header";
 // @import "./scss/module/_button";
 
 body {
-  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+  font-family: "Poppins", "游ゴシック",
+    "Yu Gothic",
+    "游ゴシック体",
+    YuGothic,
+    sans-serif;
   box-sizing: content-box;
-
-
 }
