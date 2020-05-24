@@ -17,6 +17,7 @@ main {
       .h2__icon {
         font-size: 150px;
       }
+
       // background-color: blue;
       h2 {
         // padding-top: 2rem;
@@ -30,9 +31,6 @@ main {
       // justify-content: space-around;
 
       .skill {
-        @media (max-width: 800px) {
-          // text-align: center;
-        }
 
         text-align: center;
         padding: 0;

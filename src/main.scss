@@ -5,7 +5,13 @@
 * ============================================================ */
 @import "./scss/base/_variables";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+//Googleマテリアルアイコンをインポート
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+//font-awesomeをインポート
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
 
 /* ==============================================================
 *  レイアウト
@@ -20,6 +26,7 @@
 // @import "./scss/module/_header";
 // @import "./scss/module/_button";
 @import "./scss/module/_about";
+@import "./scss/module/_work";
 
 body {
   font-family: "Poppins", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic,

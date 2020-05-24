@@ -10,7 +10,9 @@
         // text-align: center;
         // display: inline-block;
         list-style: none;
-        padding-bottom: 1rem;
+        padding-bottom: .5rem;
+        padding-top: 1rem;
+        border-bottom: 1px solid #ccc;
       }
 
       &__title {
