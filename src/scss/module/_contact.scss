@@ -1,0 +1,51 @@
+.section {
+  &__content {
+    .contact {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      // align-items: center;
+      margin-top: 110px;
+
+      @media (max-width: 800.98px) {
+        margin: 0;
+      }
+
+      &__list {
+        display: inline-block;
+        text-align: center;
+        margin: 1rem;
+        // padding: 1.3rem;
+        margin-bottom: auto;
+      }
+
+      &__link {
+        text-decoration: none;
+        color: black;
+      }
+
+      &__img {
+        // border: 1px solid black;
+
+        .fas,
+        .fab {
+          font-size: 50px;
+          // border: 1px solid black;
+          // // border-radius: 50%;
+          // padding: 10rem;
+        }
+
+        .img-qiita {
+          height: 50px;
+        }
+      }
+
+      &__title {
+        white-space: nowrap
+      }
+    }
+  }
+}

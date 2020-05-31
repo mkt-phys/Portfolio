@@ -17,14 +17,15 @@
 
       &__title {
         display: inline-block;
-        width: 30%;
+        width: 35%;
         text-align: right;
+        vertical-align: top;
 
       }
 
       &__detail {
         display: inline-block;
-        width: 70%;
+        width: 65%;
         text-align: center;
       }
     }

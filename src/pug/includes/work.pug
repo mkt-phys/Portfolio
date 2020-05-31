@@ -7,19 +7,23 @@ section.section#work
     .section__content
         ul.work
             li.work__list
-                a.work__link(href="/")
+                a.work__link(href="/" target="_blank")
                     .work__img
                         img(src=require("../../images/work/portfolio.png").default)
                     .work__title  
-                        | this portfolio
+                        |ポートフォリオ
                     .work__detail
-                        |aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        |このページのことです。PCファーストでレスポンシブ対応してます。iPad Proくらいのウィンドウの幅では見ないでください。
                         
             li.work__list
+                a.work__link(href="https://github.com/mkt-phys/portfolio" target="_blank")
                     .work__img
                         img(src=require("../../images/work/technology.jpg").default)
-                    .work__title Front-end development environment
-                    .work__detail Webpack使った。pug,scss,js,bootstrap,jQuery,lodashが使える環境
+                    .work__title フロントエンド開発環境
+                    i.fab.fa-github.text-center
+                    .work__detail pug, scss, js, BootStrap, jQuery, lodashが使える開発環境です。ローカルサーバを立ててファイルを変更すると自動でリロードされます。タスクランナーはWebPackを使ってます。<br>                                       
+                        
+
             
             li.work__list
                 .work__img.work__img--icon
