@@ -102,7 +102,7 @@ module.exports = (env, argv) => ({
       },
       // imgの設定
       {
-        test: /\.(png|svg|jpe?g|gif)/,
+        test: /\.(png|svg|jpe?g|gif|ico)/,
         use: {
           loader: "file-loader",
           options: {
