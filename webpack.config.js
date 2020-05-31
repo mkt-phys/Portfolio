@@ -35,7 +35,7 @@ module.exports = (env, argv) => ({
     path: path.join(__dirname, "docs"),
     // path: `${__dirname}`,
     // 出力ファイル名
-    filename: "00_bundle.js",
+    filename: "bundle.js",
   },
 
   // 最適化オプションを上書き
@@ -86,7 +86,7 @@ module.exports = (env, argv) => ({
         }, ],
       },
       {
-        // 対象となるファイルの拡張子(sass,scss,csssf)
+        // 対象となるファイルの拡張子(sass,scss,css)
         test: /\.(sa|sc|c)ss$/,
         // Sassファイルの読み込みとコンパイル
         use: [
@@ -124,7 +124,7 @@ module.exports = (env, argv) => ({
       cleanAfterEveryBuildPatterns: ["static*.*", "!static1.js"],
     }),
     new MiniCssExtractPlugin({
-      filename: "00_bundle.css",
+      filename: "bundle.css",
     }),
     //pugからhtmlの変換
     new HtmlWebpackPlugin({
