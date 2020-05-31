@@ -37,10 +37,15 @@ header {
       &__item {
         list-style: none;
         display: inline-block;
-        padding-right: 10px;
+        padding-right: 50px;
+
+        @media (max-width: 900px) {
+          padding-right: 20px;
+        }
 
         @media (max-width: 767.98px) {
           display: block;
+
         }
       }
 
