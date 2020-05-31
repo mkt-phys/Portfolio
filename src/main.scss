@@ -38,3 +38,9 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@media (min-width: 767.98px) {
+  .only-sp {
+    display: none;
+  }
+}
