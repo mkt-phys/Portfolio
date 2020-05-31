@@ -14,24 +14,14 @@ const particles = require("./assets/particles.json")
 
 import DoParticleJS from "./js/doParticleJS";
 
-import HeaderTitleAnimation from "./js/header-title-animation"
+import HeaderTitleAnimation from "./js/header-title-animation";
+import Close_hamburger from "./js/close_hamburger";
 
-
+// import Internal_link_scroll from "./js/internal_link_scroll"
 
 // ページ読み込み時に実行したい処理
 window.onload = () => {
-  // ParticlesJS();
   DoParticleJS();
   HeaderTitleAnimation();
-  // particlesJS.load('particles-js', particles, function () {
-  //   console.log('callback - particles-js config loaded');
-  // });
-  // Particles.init({
-  //   selector: ".background",
-  //   color: "blue",
-  //   sizeVariations: 5,
-  //   minDistance: 200,
-  //   connectParticles: true
-  // });
-
+  Close_hamburger();
 };

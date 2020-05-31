@@ -5,6 +5,17 @@ main {
     padding-top: 2rem;
     padding-bottom: 5rem;
 
+    //内部リンクでスクロールする時にヘッダーの分を下げる
+    //参考：https://www.j-cool.co.jp/blog/?p=2273
+    margin-top: -76px;
+    padding-top: calc(76px + 2rem);
+    //内部リンクに行くときにスクロールをスムーズにするには以下のスタイルを適用する
+    // 参考：https: //www.to-r.net/media/smooth_scrolling_2019/
+    // html {
+    //   scroll-behavior: smooth;
+    // }
+
+
     @media (max-width: 800.98px) {
       flex-direction: column;
       padding-bottom: 2rem;
@@ -19,7 +30,11 @@ main {
         font-size: 150px;
 
         @media (max-width: 800.98px) {
-          display: none;
+          font-size: 40px;
+
+          &--contact {
+            display: none;
+          }
         }
 
       }

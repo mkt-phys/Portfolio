@@ -5,9 +5,8 @@
 */
 export default function () {
   // ここに処理を書く
-  $(function () {
-    setTimeout(function () {
-      $(".fly-in-text").removeClass("hidden")
-    }, 500)
-  })();
+
+  setTimeout(function () {
+    $(".fly-in-text").removeClass("hidden")
+  }, 500)
 }
