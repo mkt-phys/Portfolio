@@ -14,9 +14,8 @@ export default function () {
       fruit: "りんご"
     };
     $.ajax({
-      url:
-        // "https://ybya49a2e2.execute-api.ap-northeast-1.amazonaws.com/dev-qiita",
-        type: "POST",
+      url: "https://ybya49a2e2.execute-api.ap-northeast-1.amazonaws.com/dev-qiita",
+      type: "POST",
       data: JSON.stringify(params),
       dataType: "json",
       success: function (json) {
